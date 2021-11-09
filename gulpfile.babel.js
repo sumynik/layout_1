@@ -13,22 +13,6 @@ import cheerio from "gulp-cheerio";
 import replace from "gulp-replace";
 import svgSprite from "gulp-svg-sprite";
 
-// const gulp = require('gulp');
-// const sass = require('gulp-sass');
-// const plumber = require('gulp-plumber');
-// const autoprefixer = require('gulp-autoprefixer');
-// const browserSync = require('browser-sync').create();
-// const sourceMaps = require('gulp-sourcemaps');
-// const imagemin = require("gulp-imagemin");
-// const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-// const pngquant = require('imagemin-pngquant');
-// const run = require("run-sequence");
-// const del = require("del");
-// const svgSprite = require('gulp-svg-sprite');
-// const svgmin = require('gulp-svgmin');
-// const cheerio = require('gulp-cheerio');
-// const replace = require('gulp-replace');
-
 const paths = {
     styles: {
         src: 'scss/style.scss',
@@ -132,7 +116,7 @@ export function svg(){
 
 export function serve(){
     browserSync.init({server: "build"});
-    gulp.watch(paths.styles.src, styles);
+    gulp.watch("scss/*.scss", styles);
     gulp.watch("*.html", html);
     gulp.watch(paths.scripts.src, script);
     gulp.watch("css/**/*.css", stylesCss);
