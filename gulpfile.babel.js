@@ -117,6 +117,7 @@ export function svg(){
 export function serve(){
     browserSync.init({server: "build"});
     gulp.watch("scss/*.scss", styles);
+    gulp.watch("scss/*/*.scss", styles);
     gulp.watch("*.html", html);
     gulp.watch(paths.scripts.src, script);
     gulp.watch("css/**/*.css", stylesCss);
