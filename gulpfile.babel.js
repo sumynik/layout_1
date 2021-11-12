@@ -19,11 +19,11 @@ const paths = {
         dest: 'build/css/'
     },
     scripts: {
-        src: 'js/!**!/!*.js',
-        dest: 'build/scripts/'
+        src: 'js/*.js',
+        dest: 'build/js/'
     },
     css: {
-        src: 'css/!**!/!*.css',
+        src: 'css/*.css',
         dest: 'build/css/'
     }
 };
@@ -120,7 +120,7 @@ export function serve(){
     gulp.watch("scss/*/*.scss", styles);
     gulp.watch("*.html", html);
     gulp.watch(paths.scripts.src, script);
-    gulp.watch("css/**/*.css", stylesCss);
+    gulp.watch("css/*.css", stylesCss);
     gulp.watch("img/**/*.{png,jpg}", allimg);
     gulp.watch("img/**/*.{svg}", svg);
 }
